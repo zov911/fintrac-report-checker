@@ -3,8 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Do I Need to Report This? FINTRAC Report Checker | Fortis AML Consulting</title>
+<title>Do I Need to Report This? FINTRAC Report Checker (2026)</title>
 <meta name="description" content="Check in seconds if a cash, crypto or wire transaction needs a FINTRAC report (LCTR, LVCTR, EFTR, STR) and see your filing deadline.">
+<meta name="author" content="zov911">
+<meta property="og:title" content="FINTRAC Report Checker: do I need to report this transaction?">
+<meta property="og:description" content="Free checker for Canadian reporting entities: LCTR, LVCTR, EFTR, CDR, STR and listed-person reports with exact filing deadlines.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2713%27 fill=%27none%27 stroke=%27%23B3261E%27 stroke-width=%273%27/%3E%3Cpath d=%27M10 16l4 4 8-8%27 fill=%27none%27 stroke=%27%23B3261E%27 stroke-width=%273%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
@@ -114,7 +119,7 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,50px);line-
 <body>
 <div class="wrap">
   <header class="top">
-    <p class="brand">Fortis AML Consulting</p>
+    <p class="brand">AML Compliance Toolkit · Canada · Updated 2026</p>
     <h1>Do I need to report this transaction?</h1>
     <p class="lede">Answer a few quick questions about a cash, crypto or wire transaction. You will see which FINTRAC report is required, if any, and the exact filing deadline.</p>
   </header>
@@ -220,8 +225,8 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,50px);line-
         <div id="reps"></div>
         <p class="sum" id="sum"></p>
       </div>
-      <a class="cta" href="https://fortisamlconsulting.com/contact-us/" target="_blank" rel="noopener">Ask a Fortis AML expert</a>
-      <p class="cta-sub">Missed reports in the past? We can help you fix them before an exam.</p>
+      <a class="cta" href="https://zov911.com" target="_blank" rel="noopener">Want a tool like this for your business? → zov911.com</a>
+      <p class="cta-sub">I build custom compliance checkers and calculators that turn regulation into leads. Also see the <a href="https://zov911.github.io/fintrac-fines-calculator/">FINTRAC fines calculator</a>.</p>
     </aside>
   </div>
 
@@ -234,20 +239,22 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,50px);line-
       <tr><td>Large Virtual Currency Transaction Report (LVCTR)</td><td>You receive crypto worth $10,000 or more, in one transaction or under the 24-hour rule</td><td>5 working days</td></tr>
       <tr><td>Electronic Funds Transfer Report (EFTR)</td><td>An international transfer of $10,000 or more, sent or received for a client (financial entities, MSBs and casinos)</td><td>5 working days</td></tr>
       <tr><td>Casino Disbursement Report (CDR)</td><td>A casino pays out $10,000 or more</td><td>15 calendar days</td></tr>
-      <tr><td>Suspicious Transaction Report (STR)</td><td>Reasonable grounds to suspect money laundering or terrorist financing, at any amount, including attempted transactions</td><td>As soon as practicable</td></tr>
+      <tr><td>Suspicious Transaction Report (STR)</td><td>Reasonable grounds to suspect money laundering, terrorist financing or sanctions evasion, at any amount, including attempted transactions</td><td>As soon as practicable</td></tr>
       <tr><td>Listed Person or Entity Property Report</td><td>Property linked to a listed terrorist group or person</td><td>Immediately</td></tr>
     </table>
     </div>
     <p>Working-day deadlines here skip weekends only. A public holiday in that period can give you one more day, but we show the earlier date to keep you safe. Cash or crypto received from a financial entity or public body is generally exempt from LCTR and LVCTR reporting. Each report is separate: one transaction can require more than one report.</p>
     <p>This tool is for general education and does not replace legal or compliance advice. Always confirm with <a href="https://fintrac-canafe.canada.ca/guidance-directives/transaction-operation/lctr-doie/lctr-doie-eng" target="_blank" rel="noopener">FINTRAC's official guidance</a>.</p>
+    <p style="margin-top:28px;padding-top:16px;border-top:1px solid var(--line)">© <span id="yr">2026</span> zov911 · Designed &amp; built by <a href="https://zov911.com" target="_blank" rel="noopener">zov911</a> · <a href="https://github.com/zov911" target="_blank" rel="noopener">GitHub</a> · Rules reviewed for 2026 (incl. 2024–2025 reporting-entity expansions). Not affiliated with FINTRAC.</p>
   </section>
 </div>
 
 <script>
+document.getElementById("yr").textContent=new Date().getFullYear();
 (function(){
   var BIZ=[
-    ["msb","Money services business"],["vasp","Crypto / virtual asset business"],["fin","Bank, credit union or lender"],
-    ["re","Real estate"],["dpms","Precious metals & stones dealer"],["casino","Casino"],["sec","Securities dealer"],["other","Other reporting entity"]
+    ["msb","Money services business (incl. armoured car, factoring, leasing, cheque cashing)"],["vasp","Crypto / virtual asset business"],["fin","Bank or credit union"],
+    ["re","Real estate (incl. developers)"],["mort","Mortgage broker, lender or administrator"],["dpms","Precious metals & stones dealer"],["casino","Casino"],["sec","Securities dealer"],["other","Other reporting entity"]
   ];
   var bizEl=document.getElementById("biz");
   BIZ.forEach(function(b,i){
@@ -335,7 +342,7 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,50px);line-
       }
     }
 
-    if(sus==="unsure") out.push(rep("info","Suspicious Transaction Report","Check","If you have reasonable grounds to suspect money laundering or terrorist financing, an STR is required at any amount. Document why you did or did not file."));
+    if(sus==="unsure") out.push(rep("info","Suspicious Transaction Report","Check","If you have reasonable grounds to suspect money laundering, terrorist financing or sanctions evasion, an STR is required at any amount. Document why you did or did not file."));
     else if(sus==="no"&&amt>0&&!listed) out.push(rep("info","Suspicious Transaction Report","Stay alert","Nothing to file now. If you later notice red flags, an STR is required at any amount."));
 
     var stamp=document.getElementById("stamp"),t=document.getElementById("vTitle"),s=document.getElementById("vSub"),state;
