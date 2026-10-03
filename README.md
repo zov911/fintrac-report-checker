@@ -37,4 +37,4 @@ I build compliance checkers, calculators and lead-gen tools for RegTech and prof
 
 **Reach out → [zov911.com](https://zov911.com)**
 
-© 2026 zov911. All rights reserved.
+© zov911. All rights reserved.
